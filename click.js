@@ -4,6 +4,7 @@ function samecolor(){
   let div = doc.querySelectorAll("#samecolor div");
   for(let i=0;i<div.length;i++){
     div[i].style.backgroundColor = "#ff0000";
+    div[i].style.opacity += [i]*.25
   }
 }
 //declare diffcolor() here
@@ -11,7 +12,12 @@ function diffcolor(){
   let doc = document;
   let div = doc.querySelectorAll("#diffcolor div");
   for(let i=0;i<div.length;i++){
-    if([k]%2)
+    if([i]%2 == 1){
+      doc[i].style.backgroundColor = "#0000ff";
+    }
+    else{
+      doc[i].style.backgroundColor = "#ffff00;"
+    }
   }
 }
 
