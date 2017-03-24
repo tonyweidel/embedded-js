@@ -1,22 +1,22 @@
 //declare samecolor() here
 function samecolor(){
-  let doc = document;
+  const doc = document;
   let div = doc.querySelectorAll("#samecolor div");
   for(let i=0;i<div.length;i++){
     div[i].style.backgroundColor = "#ff0000";
-    div[i].style.opacity += [i]*.25
+    div[i].style.opacity += i*0.25
   }
 }
 //declare diffcolor() here
 function diffcolor(){
-  let doc = document;
+  const doc = document;
   let div = doc.querySelectorAll("#diffcolor div");
   for(let i=0;i<div.length;i++){
     if([i]%2 == 1){
-      doc[i].style.backgroundColor = "#0000ff";
+      div[i].style.backgroundColor = "#00ff00";
     }
     else{
-      doc[i].style.backgroundColor = "#ffff00;"
+      div[i].style.backgroundColor = "#ff00ff";
     }
   }
 }
